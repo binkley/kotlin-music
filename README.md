@@ -50,8 +50,13 @@ Pitches are assumed as
 is treated as identical to "Bb".
 
 The 12 standard pitches are represented as the
-[`Pitches`](./src/main/kotlin/hm/binkley/music/Pitches.kt) `enum`. This code
+[`Pitches`](src/main/kotlin/hm/binkley/music/Pitch.kt) `enum`. This code
 chooses to represent "black key" notes as _flats_ in the enum values. In terms
 of code, it is easy to append a simple "b" character to a "white key" enum
 name, and difficult to append a "#" symbol, and this helps with code
 completion, and Java interoperability.
+
+#### Properties
+
+- `dominant` -- the dominant (upper direction in the circle of 5ths)
+- `subdominant` -- the subdominant (lower direction in the circle of 5ths)
