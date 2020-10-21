@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test
  * @todo These tests _assume_ how the code works.  There are not separate
  * tests for each major/minor key
  */
-internal class KeyTest {
+internal class ScaleTest {
     @Test
     fun `should have all notes for major keys`() {
         A.asMajorKey().tonic shouldBeSameInstanceAs A

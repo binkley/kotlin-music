@@ -1,11 +1,11 @@
 package hm.binkley.music
 
-abstract class Key(val pitches: List<Pitch>) {
+abstract class Scale(val pitches: List<Pitch>) {
     val tonic get() = pitches[0]
 }
 
 /**@todo How to seal major key?  There are only 12 */
-open class MajorKey(tonic: Pitch) : Key(
+open class MajorKey(tonic: Pitch) : Scale(
     listOf(
         tonic,
         tonic.supertonic,
@@ -18,7 +18,7 @@ open class MajorKey(tonic: Pitch) : Key(
 )
 
 /**@todo How to seal minor key?  There are only 12 */
-open class MinorKey(tonic: Pitch) : Key(
+open class MinorKey(tonic: Pitch) : Scale(
     listOf(
         tonic,
         tonic.supertonic,

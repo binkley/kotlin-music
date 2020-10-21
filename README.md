@@ -68,3 +68,8 @@ completion, and Java interoperability.
 - `major submediant`
 - `minor subtonic`
 - `minor supertonic`
+
+#### Functions
+
+- `asMajorKey` returns a standard major scale for the pitch
+- `asMinorKey` returns a standard minor scale for the pitch
