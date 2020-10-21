@@ -44,4 +44,6 @@ open class MinorKey(tonic: Pitch) : Scale(
         tonic.minorSubmediant,
         tonic.minorSubtonic
     )
-)
+) {
+    fun asRelativeMajor() = MajorKey(tonic.minorMediant)
+}

@@ -48,4 +48,20 @@ internal class ScaleTest {
         G.asMajorKey().asRelativeMinor() shouldBe E.asMinorKey()
         Ab.asMajorKey().asRelativeMinor() shouldBe F.asMinorKey()
     }
+
+    @Test
+    fun `should have a relative major for minor scales`() {
+        A.asMinorKey().asRelativeMajor() shouldBe C.asMajorKey()
+        Bb.asMinorKey().asRelativeMajor() shouldBe Db.asMajorKey()
+        B.asMinorKey().asRelativeMajor() shouldBe D.asMajorKey()
+        C.asMinorKey().asRelativeMajor() shouldBe Eb.asMajorKey()
+        Db.asMinorKey().asRelativeMajor() shouldBe E.asMajorKey()
+        D.asMinorKey().asRelativeMajor() shouldBe F.asMajorKey()
+        Eb.asMinorKey().asRelativeMajor() shouldBe Gb.asMajorKey()
+        E.asMinorKey().asRelativeMajor() shouldBe G.asMajorKey()
+        F.asMinorKey().asRelativeMajor() shouldBe Ab.asMajorKey()
+        Gb.asMinorKey().asRelativeMajor() shouldBe A.asMajorKey()
+        G.asMinorKey().asRelativeMajor() shouldBe Bb.asMajorKey()
+        Ab.asMinorKey().asRelativeMajor() shouldBe B.asMajorKey()
+    }
 }
