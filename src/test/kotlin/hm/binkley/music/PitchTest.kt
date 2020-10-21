@@ -55,6 +55,22 @@ internal class PitchTest {
     }
 
     @Test
+    fun `all pitches have a major mediant`() {
+        A.majorMediant shouldBeSameInstanceAs Db
+        Bb.majorMediant shouldBeSameInstanceAs D
+        B.majorMediant shouldBeSameInstanceAs Eb
+        C.majorMediant shouldBeSameInstanceAs E
+        Db.majorMediant shouldBeSameInstanceAs F
+        D.majorMediant shouldBeSameInstanceAs Gb
+        Eb.majorMediant shouldBeSameInstanceAs G
+        E.majorMediant shouldBeSameInstanceAs Ab
+        F.majorMediant shouldBeSameInstanceAs A
+        Gb.majorMediant shouldBeSameInstanceAs Bb
+        G.majorMediant shouldBeSameInstanceAs B
+        Ab.majorMediant shouldBeSameInstanceAs C
+    }
+
+    @Test
     fun `all pitches have a subdominant`() {
         A.subdominant shouldBeSameInstanceAs D
         Bb.subdominant shouldBeSameInstanceAs Eb

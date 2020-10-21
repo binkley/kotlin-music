@@ -6,8 +6,9 @@ enum class Pitch {
 
     val supertonic get() = this + 2
     val minorMediant get() = this + 3
-    val dominant get() = this + 7
+    val majorMediant get() = this + 4
     val subdominant get() = this + 5
+    val dominant get() = this + 7
 
     /** The "relative minor" implies we are in a major key. */
     val relativeMinor get() = this + 9
