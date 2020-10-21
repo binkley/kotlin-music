@@ -167,34 +167,18 @@ internal class PitchTest {
     }
 
     @Test
-    fun `all pitches have a relative minor for major keys`() {
-        A.relativeMinor shouldBeSameInstanceAs Gb
-        Bb.relativeMinor shouldBeSameInstanceAs G
-        B.relativeMinor shouldBeSameInstanceAs Ab
-        C.relativeMinor shouldBeSameInstanceAs A
-        Db.relativeMinor shouldBeSameInstanceAs Bb
-        D.relativeMinor shouldBeSameInstanceAs B
-        Eb.relativeMinor shouldBeSameInstanceAs C
-        E.relativeMinor shouldBeSameInstanceAs Db
-        F.relativeMinor shouldBeSameInstanceAs D
-        Gb.relativeMinor shouldBeSameInstanceAs Eb
-        G.relativeMinor shouldBeSameInstanceAs E
-        Ab.relativeMinor shouldBeSameInstanceAs F
-    }
-
-    @Test
-    fun `all pitches have a relative major for minor keys`() {
-        A.relativeMajor shouldBeSameInstanceAs C
-        Bb.relativeMajor shouldBeSameInstanceAs Db
-        B.relativeMajor shouldBeSameInstanceAs D
-        C.relativeMajor shouldBeSameInstanceAs Eb
-        Db.relativeMajor shouldBeSameInstanceAs E
-        D.relativeMajor shouldBeSameInstanceAs F
-        Eb.relativeMajor shouldBeSameInstanceAs Gb
-        E.relativeMajor shouldBeSameInstanceAs G
-        F.relativeMajor shouldBeSameInstanceAs Ab
-        Gb.relativeMajor shouldBeSameInstanceAs A
-        G.relativeMajor shouldBeSameInstanceAs Bb
-        Ab.relativeMajor shouldBeSameInstanceAs B
+    fun `all pitches have a major subtonic`() {
+        A.majorSubtonic shouldBeSameInstanceAs Ab
+        Bb.majorSubtonic shouldBeSameInstanceAs A
+        B.majorSubtonic shouldBeSameInstanceAs Bb
+        C.majorSubtonic shouldBeSameInstanceAs B
+        Db.majorSubtonic shouldBeSameInstanceAs C
+        D.majorSubtonic shouldBeSameInstanceAs Db
+        Eb.majorSubtonic shouldBeSameInstanceAs D
+        E.majorSubtonic shouldBeSameInstanceAs Eb
+        F.majorSubtonic shouldBeSameInstanceAs E
+        Gb.majorSubtonic shouldBeSameInstanceAs F
+        G.majorSubtonic shouldBeSameInstanceAs Gb
+        Ab.majorSubtonic shouldBeSameInstanceAs G
     }
 }
