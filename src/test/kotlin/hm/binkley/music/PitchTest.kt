@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test
  *
  * @todo Rethink test approach: perhaps passing in input/expected pairs?
  */
-internal class PitchesTest {
+internal class PitchTest {
     @Test
     fun `all pitches have a dominant`() {
         A.dominant shouldBeSameInstanceAs E
