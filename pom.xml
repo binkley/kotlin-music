@@ -206,7 +206,7 @@
                         <avoidCallsTo>org.apache.commons.logging
                         </avoidCallsTo>
                     </avoidCallsTo>
-                    <coverageThreshold>100</coverageThreshold>
+                    <coverageThreshold>96</coverageThreshold>
                     <excludedClasses>
                         <excludedClass>hm.binkley.math.MainKt
                         </excludedClass>

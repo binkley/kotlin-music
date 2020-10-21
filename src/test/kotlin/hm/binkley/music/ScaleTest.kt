@@ -8,6 +8,7 @@ import hm.binkley.music.Pitch.C
 import hm.binkley.music.Pitch.D
 import hm.binkley.music.Pitch.Db
 import hm.binkley.music.Pitch.E
+import hm.binkley.music.Pitch.Eb
 import hm.binkley.music.Pitch.F
 import hm.binkley.music.Pitch.G
 import hm.binkley.music.Pitch.Gb
@@ -34,11 +35,17 @@ internal class ScaleTest {
 
     @Test
     fun `should have a relative minor for major scales`() {
-        A.asMajorKey().relativeMinor shouldBe Gb
-        Bb.asMajorKey().relativeMinor shouldBe G
-        B.asMajorKey().relativeMinor shouldBe Ab
-        C.asMajorKey().relativeMinor shouldBe A
-        Db.asMajorKey().relativeMinor shouldBe Bb
-        D.asMajorKey().relativeMinor shouldBe B
+        A.asMajorKey().asRelativeMinor() shouldBe Gb.asMinorKey()
+        Bb.asMajorKey().asRelativeMinor() shouldBe G.asMinorKey()
+        B.asMajorKey().asRelativeMinor() shouldBe Ab.asMinorKey()
+        C.asMajorKey().asRelativeMinor() shouldBe A.asMinorKey()
+        Db.asMajorKey().asRelativeMinor() shouldBe Bb.asMinorKey()
+        D.asMajorKey().asRelativeMinor() shouldBe B.asMinorKey()
+        Eb.asMajorKey().asRelativeMinor() shouldBe C.asMinorKey()
+        E.asMajorKey().asRelativeMinor() shouldBe Db.asMinorKey()
+        F.asMajorKey().asRelativeMinor() shouldBe D.asMinorKey()
+        Gb.asMajorKey().asRelativeMinor() shouldBe Eb.asMinorKey()
+        G.asMajorKey().asRelativeMinor() shouldBe E.asMinorKey()
+        Ab.asMajorKey().asRelativeMinor() shouldBe F.asMinorKey()
     }
 }

@@ -1,7 +1,21 @@
 package hm.binkley.music
 
+import lombok.Generated
+import java.util.Objects.hash
+
 abstract class Scale(val pitches: List<Pitch>) {
     val tonic get() = pitches[0]
+
+    @Generated
+    override fun equals(other: Any?) = this === other ||
+        other is Scale &&
+        pitches == other.pitches
+
+    @Generated
+    override fun hashCode() = hash(javaClass, pitches)
+
+    @Generated
+    override fun toString() = pitches.toString()
 }
 
 /**@todo How best to seal major key?  There are only 12 */
@@ -16,7 +30,7 @@ open class MajorKey(tonic: Pitch) : Scale(
         tonic.majorSubtonic
     )
 ) {
-    val relativeMinor = tonic.majorSubmediant
+    fun asRelativeMinor() = MinorKey(tonic.majorSubmediant)
 }
 
 /**@todo How best to seal minor key?  There are only 12 */
@@ -30,6 +44,4 @@ open class MinorKey(tonic: Pitch) : Scale(
         tonic.minorSubmediant,
         tonic.minorSubtonic
     )
-) {
-    val relativeMinor = MajorKey(tonic.minorMediant)
-}
+)
