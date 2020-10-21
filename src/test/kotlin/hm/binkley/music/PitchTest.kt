@@ -23,19 +23,19 @@ import org.junit.jupiter.api.Test
  */
 internal class PitchTest {
     @Test
-    fun `all pitches have a dominant`() {
-        A.dominant shouldBeSameInstanceAs E
-        Bb.dominant shouldBeSameInstanceAs F
-        B.dominant shouldBeSameInstanceAs Gb
-        C.dominant shouldBeSameInstanceAs G
-        Db.dominant shouldBeSameInstanceAs Ab
-        D.dominant shouldBeSameInstanceAs A
-        Eb.dominant shouldBeSameInstanceAs Bb
-        E.dominant shouldBeSameInstanceAs B
-        F.dominant shouldBeSameInstanceAs C
-        Gb.dominant shouldBeSameInstanceAs Db
-        G.dominant shouldBeSameInstanceAs D
-        Ab.dominant shouldBeSameInstanceAs Eb
+    fun `all pitches have a supertonic`() {
+        A.supertonic shouldBeSameInstanceAs B
+        Bb.supertonic shouldBeSameInstanceAs C
+        B.supertonic shouldBeSameInstanceAs Db
+        C.supertonic shouldBeSameInstanceAs D
+        Db.supertonic shouldBeSameInstanceAs Eb
+        D.supertonic shouldBeSameInstanceAs E
+        Eb.supertonic shouldBeSameInstanceAs F
+        E.supertonic shouldBeSameInstanceAs Gb
+        F.supertonic shouldBeSameInstanceAs G
+        Gb.supertonic shouldBeSameInstanceAs Ab
+        G.supertonic shouldBeSameInstanceAs A
+        Ab.supertonic shouldBeSameInstanceAs Bb
     }
 
     @Test
@@ -52,6 +52,22 @@ internal class PitchTest {
         Gb.subdominant shouldBeSameInstanceAs B
         G.subdominant shouldBeSameInstanceAs C
         Ab.subdominant shouldBeSameInstanceAs Db
+    }
+
+    @Test
+    fun `all pitches have a dominant`() {
+        A.dominant shouldBeSameInstanceAs E
+        Bb.dominant shouldBeSameInstanceAs F
+        B.dominant shouldBeSameInstanceAs Gb
+        C.dominant shouldBeSameInstanceAs G
+        Db.dominant shouldBeSameInstanceAs Ab
+        D.dominant shouldBeSameInstanceAs A
+        Eb.dominant shouldBeSameInstanceAs Bb
+        E.dominant shouldBeSameInstanceAs B
+        F.dominant shouldBeSameInstanceAs C
+        Gb.dominant shouldBeSameInstanceAs Db
+        G.dominant shouldBeSameInstanceAs D
+        Ab.dominant shouldBeSameInstanceAs Eb
     }
 
     @Test

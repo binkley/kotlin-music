@@ -4,6 +4,7 @@ enum class Pitch {
     // Choosing the flattened form as # is not representable in code
     A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab;
 
+    val supertonic get() = this + 2
     val dominant get() = this + 7
     val subdominant get() = this + 5
 
