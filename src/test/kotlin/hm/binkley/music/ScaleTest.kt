@@ -3,6 +3,7 @@ package hm.binkley.music
 import hm.binkley.music.Pitch.A
 import hm.binkley.music.Pitch.Ab
 import hm.binkley.music.Pitch.B
+import hm.binkley.music.Pitch.Bb
 import hm.binkley.music.Pitch.C
 import hm.binkley.music.Pitch.D
 import hm.binkley.music.Pitch.Db
@@ -29,5 +30,15 @@ internal class ScaleTest {
     fun `should have all notes for minor keys`() {
         A.asMinorKey().tonic shouldBeSameInstanceAs A
         A.asMinorKey().pitches shouldBe listOf(A, B, C, D, E, F, G)
+    }
+
+    @Test
+    fun `should have a relative minor for major scales`() {
+        A.asMajorKey().relativeMinor shouldBe Gb
+        Bb.asMajorKey().relativeMinor shouldBe G
+        B.asMajorKey().relativeMinor shouldBe Ab
+        C.asMajorKey().relativeMinor shouldBe A
+        Db.asMajorKey().relativeMinor shouldBe Bb
+        D.asMajorKey().relativeMinor shouldBe B
     }
 }

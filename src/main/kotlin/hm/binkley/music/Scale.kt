@@ -15,7 +15,9 @@ open class MajorKey(tonic: Pitch) : Scale(
         tonic.majorSubmediant,
         tonic.majorSubtonic
     )
-)
+) {
+    val relativeMinor = tonic.majorSubmediant
+}
 
 /**@todo How best to seal minor key?  There are only 12 */
 open class MinorKey(tonic: Pitch) : Scale(
@@ -28,4 +30,6 @@ open class MinorKey(tonic: Pitch) : Scale(
         tonic.minorSubmediant,
         tonic.minorSubtonic
     )
-)
+) {
+    val relativeMinor = MajorKey(tonic.minorMediant)
+}
