@@ -13,7 +13,6 @@ enum class Pitch {
     val minorSubmediant get() = this + 8
     val majorSubmediant get() = this + 9
     val minorSubtonic get() = this + 10
-    val majorSubtonic get() = this + 11
 
     /**
      * The "relative minor" implies we are in a major key.

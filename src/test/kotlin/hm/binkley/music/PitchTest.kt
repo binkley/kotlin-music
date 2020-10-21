@@ -167,22 +167,6 @@ internal class PitchTest {
     }
 
     @Test
-    fun `all pitches have a major subtonic`() {
-        A.majorSubtonic shouldBeSameInstanceAs Ab
-        Bb.majorSubtonic shouldBeSameInstanceAs A
-        B.majorSubtonic shouldBeSameInstanceAs Bb
-        C.majorSubtonic shouldBeSameInstanceAs B
-        Db.majorSubtonic shouldBeSameInstanceAs C
-        D.majorSubtonic shouldBeSameInstanceAs Db
-        Eb.majorSubtonic shouldBeSameInstanceAs D
-        E.majorSubtonic shouldBeSameInstanceAs Eb
-        F.majorSubtonic shouldBeSameInstanceAs E
-        Gb.majorSubtonic shouldBeSameInstanceAs F
-        G.majorSubtonic shouldBeSameInstanceAs Gb
-        Ab.majorSubtonic shouldBeSameInstanceAs G
-    }
-
-    @Test
     fun `all pitches have a relative minor for major keys`() {
         A.relativeMinor shouldBeSameInstanceAs Gb
         Bb.relativeMinor shouldBeSameInstanceAs G
