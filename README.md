@@ -73,3 +73,13 @@ completion, and Java interoperability.
 
 - `asMajorKey` returns a standard major scale for the pitch
 - `asMinorKey` returns a standard minor scale for the pitch
+
+### Scales
+
+The implicit assumption is a 12-tone scale. Factory methods are provided to
+produce a standard major or minor scale.
+
+#### Properties
+
+- `tonic` is the root of the scale following tradition
+- `pitches` are the notes, with the tonic as the first element

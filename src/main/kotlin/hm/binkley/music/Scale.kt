@@ -4,7 +4,7 @@ abstract class Scale(val pitches: List<Pitch>) {
     val tonic get() = pitches[0]
 }
 
-/**@todo How to seal major key?  There are only 12 */
+/**@todo How best to seal major key?  There are only 12 */
 open class MajorKey(tonic: Pitch) : Scale(
     listOf(
         tonic,
@@ -17,7 +17,7 @@ open class MajorKey(tonic: Pitch) : Scale(
     )
 )
 
-/**@todo How to seal minor key?  There are only 12 */
+/**@todo How best to seal minor key?  There are only 12 */
 open class MinorKey(tonic: Pitch) : Scale(
     listOf(
         tonic,
