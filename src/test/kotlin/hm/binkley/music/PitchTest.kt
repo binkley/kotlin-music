@@ -12,6 +12,7 @@ import hm.binkley.music.Pitch.Eb
 import hm.binkley.music.Pitch.F
 import hm.binkley.music.Pitch.G
 import hm.binkley.music.Pitch.Gb
+import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.matchers.types.shouldBeSameInstanceAs
 import org.junit.jupiter.api.Test
 
@@ -180,5 +181,52 @@ internal class PitchTest {
         Gb.majorSubtonic shouldBeSameInstanceAs F
         G.majorSubtonic shouldBeSameInstanceAs Gb
         Ab.majorSubtonic shouldBeSameInstanceAs G
+    }
+
+    @Test
+    fun `all pitches have alternative names`() {
+        shouldThrow<IllegalArgumentException> {
+            Pitch.equivalentTo("F###") // No triple sharps
+        }
+        shouldThrow<IllegalArgumentException> {
+            Pitch.equivalentTo("Bbbb") // No triple flats
+        }
+
+        Pitch.equivalentTo("A") shouldBeSameInstanceAs A
+        Pitch.equivalentTo("Gx") shouldBeSameInstanceAs A
+        Pitch.equivalentTo("Bbb") shouldBeSameInstanceAs A
+        Pitch.equivalentTo("Bb") shouldBeSameInstanceAs Bb
+        Pitch.equivalentTo("A#") shouldBeSameInstanceAs Bb
+        Pitch.equivalentTo("Cbb") shouldBeSameInstanceAs Bb
+        Pitch.equivalentTo("B") shouldBeSameInstanceAs B
+        Pitch.equivalentTo("Ax") shouldBeSameInstanceAs B
+        Pitch.equivalentTo("Cb") shouldBeSameInstanceAs B
+        Pitch.equivalentTo("C") shouldBeSameInstanceAs C
+        Pitch.equivalentTo("B#") shouldBeSameInstanceAs C
+        Pitch.equivalentTo("Dbb") shouldBeSameInstanceAs C
+        Pitch.equivalentTo("Db") shouldBeSameInstanceAs Db
+        Pitch.equivalentTo("C#") shouldBeSameInstanceAs Db
+        Pitch.equivalentTo("Bx") shouldBeSameInstanceAs Db
+        Pitch.equivalentTo("D") shouldBeSameInstanceAs D
+        Pitch.equivalentTo("Cx") shouldBeSameInstanceAs D
+        Pitch.equivalentTo("Ebb") shouldBeSameInstanceAs D
+        Pitch.equivalentTo("Eb") shouldBeSameInstanceAs Eb
+        Pitch.equivalentTo("D#") shouldBeSameInstanceAs Eb
+        Pitch.equivalentTo("Fbb") shouldBeSameInstanceAs Eb
+        Pitch.equivalentTo("E") shouldBeSameInstanceAs E
+        Pitch.equivalentTo("Dx") shouldBeSameInstanceAs E
+        Pitch.equivalentTo("Fb") shouldBeSameInstanceAs E
+        Pitch.equivalentTo("F") shouldBeSameInstanceAs F
+        Pitch.equivalentTo("E#") shouldBeSameInstanceAs F
+        Pitch.equivalentTo("Gbb") shouldBeSameInstanceAs F
+        Pitch.equivalentTo("Gb") shouldBeSameInstanceAs Gb
+        Pitch.equivalentTo("F#") shouldBeSameInstanceAs Gb
+        Pitch.equivalentTo("Ex") shouldBeSameInstanceAs Gb
+        Pitch.equivalentTo("G") shouldBeSameInstanceAs G
+        Pitch.equivalentTo("Fx") shouldBeSameInstanceAs G
+        Pitch.equivalentTo("Abb") shouldBeSameInstanceAs G
+        // NB -- A-flat is special, with black keys on either side
+        Pitch.equivalentTo("Ab") shouldBeSameInstanceAs Ab
+        Pitch.equivalentTo("G#") shouldBeSameInstanceAs Ab
     }
 }

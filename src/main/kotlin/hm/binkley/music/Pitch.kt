@@ -1,8 +1,20 @@
 package hm.binkley.music
 
-enum class Pitch {
+enum class Pitch(private val aka: List<String>) {
     // Choosing the flattened form as # is not representable in code
-    A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab;
+    // Note the interplay of white-vs-black note keys
+    A(listOf("Gx", "Bbb")),
+    Bb(listOf("A#", "Cbb")),
+    B(listOf("Ax", "Cb")),
+    C(listOf("B#", "Dbb")),
+    Db(listOf("C#", "Bx")),
+    D(listOf("Cx", "Ebb")),
+    Eb(listOf("D#", "Fbb")),
+    E(listOf("Dx", "Fb")),
+    F(listOf("E#", "Gbb")),
+    Gb(listOf("F#", "Ex")),
+    G(listOf("Fx", "Abb")),
+    Ab(listOf("G#"));
 
     val supertonic get() = this + 2
     val minorMediant get() = this + 3
@@ -19,4 +31,18 @@ enum class Pitch {
 
     fun asMajorKey() = MajorKey(this)
     fun asMinorKey() = MinorKey(this)
+
+    companion object {
+        /**
+         * *NB* &mdash; there is no clean way to "override" a static
+         * function.
+         */
+        fun equivalentTo(name: String): Pitch {
+            for (value in values()) {
+                if (name == value.name) return value
+                if (name in value.aka) return value
+            }
+            throw IllegalArgumentException("No enum constant matches $name.")
+        }
+    }
 }
