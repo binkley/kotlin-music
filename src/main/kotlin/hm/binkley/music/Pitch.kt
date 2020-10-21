@@ -11,11 +11,20 @@ enum class Pitch {
     val tritone get() = this + 6
     val dominant get() = this + 7
     val minorSubmediant get() = this + 8
+    val majorSubmediant get() = this + 9
 
-    /** The "relative minor" implies we are in a major key. */
+    /**
+     * The "relative minor" implies we are in a major key.
+     *
+     * @todo Move property to [MajorScale]
+     */
     val relativeMinor get() = this + 9
 
-    /** The "relative major" implies we are in a minor key. */
+    /**
+     * The "relative major" implies we are in a minor key.
+     *
+     * @todo Move property to [MinorScale]
+     * */
     val relativeMajor get() = this + 3
 
     operator fun plus(steps: Int) = values()[(ordinal + steps) % 12]
