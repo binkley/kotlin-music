@@ -39,6 +39,22 @@ internal class PitchTest {
     }
 
     @Test
+    fun `all pitches have a minor mediant`() {
+        A.minorMediant shouldBeSameInstanceAs C
+        Bb.minorMediant shouldBeSameInstanceAs Db
+        B.minorMediant shouldBeSameInstanceAs D
+        C.minorMediant shouldBeSameInstanceAs Eb
+        Db.minorMediant shouldBeSameInstanceAs E
+        D.minorMediant shouldBeSameInstanceAs F
+        Eb.minorMediant shouldBeSameInstanceAs Gb
+        E.minorMediant shouldBeSameInstanceAs G
+        F.minorMediant shouldBeSameInstanceAs Ab
+        Gb.minorMediant shouldBeSameInstanceAs A
+        G.minorMediant shouldBeSameInstanceAs Bb
+        Ab.minorMediant shouldBeSameInstanceAs B
+    }
+
+    @Test
     fun `all pitches have a subdominant`() {
         A.subdominant shouldBeSameInstanceAs D
         Bb.subdominant shouldBeSameInstanceAs Eb

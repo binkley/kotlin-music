@@ -5,6 +5,7 @@ enum class Pitch {
     A, Bb, B, C, Db, D, Eb, E, F, Gb, G, Ab;
 
     val supertonic get() = this + 2
+    val minorMediant get() = this + 3
     val dominant get() = this + 7
     val subdominant get() = this + 5
 
