@@ -119,6 +119,22 @@ internal class PitchTest {
     }
 
     @Test
+    fun `all pitches have a minor submediant`() {
+        A.minorSubmediant shouldBeSameInstanceAs F
+        Bb.minorSubmediant shouldBeSameInstanceAs Gb
+        B.minorSubmediant shouldBeSameInstanceAs G
+        C.minorSubmediant shouldBeSameInstanceAs Ab
+        Db.minorSubmediant shouldBeSameInstanceAs A
+        D.minorSubmediant shouldBeSameInstanceAs Bb
+        Eb.minorSubmediant shouldBeSameInstanceAs B
+        E.minorSubmediant shouldBeSameInstanceAs C
+        F.minorSubmediant shouldBeSameInstanceAs Db
+        Gb.minorSubmediant shouldBeSameInstanceAs D
+        G.minorSubmediant shouldBeSameInstanceAs Eb
+        Ab.minorSubmediant shouldBeSameInstanceAs E
+    }
+
+    @Test
     fun `all pitches have a relative minor for major keys`() {
         A.relativeMinor shouldBeSameInstanceAs Gb
         Bb.relativeMinor shouldBeSameInstanceAs G
