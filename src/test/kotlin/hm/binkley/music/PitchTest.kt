@@ -53,4 +53,20 @@ internal class PitchTest {
         G.subdominant shouldBeSameInstanceAs C
         Ab.subdominant shouldBeSameInstanceAs Db
     }
+
+    @Test
+    fun `all pitches have a relative minor for major keys`() {
+        A.relativeMinor shouldBeSameInstanceAs Gb
+        Bb.relativeMinor shouldBeSameInstanceAs G
+        B.relativeMinor shouldBeSameInstanceAs Ab
+        C.relativeMinor shouldBeSameInstanceAs A
+        Db.relativeMinor shouldBeSameInstanceAs Bb
+        D.relativeMinor shouldBeSameInstanceAs B
+        Eb.relativeMinor shouldBeSameInstanceAs C
+        E.relativeMinor shouldBeSameInstanceAs Db
+        F.relativeMinor shouldBeSameInstanceAs D
+        Gb.relativeMinor shouldBeSameInstanceAs Eb
+        G.relativeMinor shouldBeSameInstanceAs E
+        Ab.relativeMinor shouldBeSameInstanceAs F
+    }
 }
