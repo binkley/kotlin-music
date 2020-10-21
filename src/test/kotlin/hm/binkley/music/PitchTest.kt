@@ -87,6 +87,22 @@ internal class PitchTest {
     }
 
     @Test
+    fun `all pitches have a tritone`() {
+        A.tritone shouldBeSameInstanceAs Eb
+        Bb.tritone shouldBeSameInstanceAs E
+        B.tritone shouldBeSameInstanceAs F
+        C.tritone shouldBeSameInstanceAs Gb
+        Db.tritone shouldBeSameInstanceAs G
+        D.tritone shouldBeSameInstanceAs Ab
+        Eb.tritone shouldBeSameInstanceAs A
+        E.tritone shouldBeSameInstanceAs Bb
+        F.tritone shouldBeSameInstanceAs B
+        Gb.tritone shouldBeSameInstanceAs C
+        G.tritone shouldBeSameInstanceAs Db
+        Ab.tritone shouldBeSameInstanceAs D
+    }
+
+    @Test
     fun `all pitches have a dominant`() {
         A.dominant shouldBeSameInstanceAs E
         Bb.dominant shouldBeSameInstanceAs F
