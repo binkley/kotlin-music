@@ -184,8 +184,7 @@
                                 <rule>
                                     <limits>
                                         <limit>
-                                            <!-- TODO: Kotlin vs JaCoCo -->
-                                            <minimum>99%</minimum>
+                                            <minimum>100%</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -220,8 +219,7 @@
                         <excludedMethod>longValue</excludedMethod>
                         <excludedMethod>shortValue</excludedMethod>
                     </excludedMethods>
-                    <!-- TODO: How to make mutation testing happy? -->
-                    <mutationThreshold>86</mutationThreshold>
+                    <mutationThreshold>100</mutationThreshold>
                     <targetClasses>
                         <param>hm.binkley*</param>
                     </targetClasses>
