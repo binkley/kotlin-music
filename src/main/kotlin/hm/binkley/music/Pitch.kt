@@ -9,4 +9,7 @@ enum class Pitch {
 
     /** The "relative minor" implies we are in a major key. */
     val relativeMinor get() = values()[(ordinal + 9) % 12]
+
+    /** The "relative major" implies we are in a minor key. */
+    val relativeMajor get() = values()[(ordinal + 3) % 12]
 }
