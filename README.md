@@ -9,7 +9,7 @@
 [![Public Domain](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](http://unlicense.org/)
 [![made with kotlin](https://img.shields.io/badge/made%20with-Kotlin-1f425f.svg)](https://kotlinlang.org/)
 
-Kotlin types and functions for music.
+Kotlin types, properties, and functions for music.
 
 ## Build and try
 
