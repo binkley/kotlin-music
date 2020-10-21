@@ -83,3 +83,10 @@ produce a standard major or minor scale.
 
 - `tonic` is the root of the scale following tradition
 - `pitches` are the notes, with the tonic as the first element
+
+#### Functions
+
+- `MajorScale.asRelativeMinor` returns the relative minor scale of a major
+  scale
+- `MinorScale.asRelativeMajor` returns the relative major scale of a minor
+  scale
