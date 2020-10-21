@@ -58,5 +58,13 @@ completion, and Java interoperability.
 
 #### Properties
 
-- `dominant` -- the dominant (upper direction in the circle of 5ths)
-- `subdominant` -- the subdominant (lower direction in the circle of 5ths)
+- `supertonic`
+- `minor mediant`
+- `major mediant`
+- `subdominant`
+- `tritone`
+- `dominant`
+- `minor submediant`
+- `major submediant`
+- `minor subtonic`
+- `minor supertonic`
