@@ -13,6 +13,7 @@ import hm.binkley.music.Pitch.F
 import hm.binkley.music.Pitch.G
 import hm.binkley.music.Pitch.Gb
 import io.kotest.assertions.throwables.shouldThrow
+import io.kotest.matchers.shouldBe
 import io.kotest.matchers.types.shouldBeSameInstanceAs
 import org.junit.jupiter.api.Test
 
@@ -245,4 +246,10 @@ internal class PitchTest {
         Pitch.equivalentTo("Ab") shouldBeSameInstanceAs Ab
         Pitch.equivalentTo("G#") shouldBeSameInstanceAs Ab
     }
+
+    @Test
+    fun `pitches can be raised`() = (Ab + 1) shouldBe A
+
+    @Test
+    fun `pitches can be lowered`() = (A - 1) shouldBe Ab
 }

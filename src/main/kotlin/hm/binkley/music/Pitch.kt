@@ -29,6 +29,7 @@ enum class Pitch(private val aka: List<String>) {
     val majorSubtonic get() = this + 11
 
     operator fun plus(steps: Int) = values()[(ordinal + steps) % 12]
+    operator fun minus(steps: Int) = values()[(ordinal + (12 - steps)) % 12]
 
     fun asMajorKey() = MajorKey(this)
     fun asMinorKey() = MinorKey(this)

@@ -200,7 +200,7 @@
                 <configuration>
                     <!-- TODO: PITest does not grok Kotlin delegation -->
                     <coverageThreshold>91</coverageThreshold>
-                    <mutationThreshold>42</mutationThreshold>
+                    <mutationThreshold>50</mutationThreshold>
                     <timestampedReports>false</timestampedReports>
                 </configuration>
                 <executions>
