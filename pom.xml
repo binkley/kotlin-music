@@ -199,8 +199,8 @@
                 <version>${pitest-maven.version}</version>
                 <configuration>
                     <!-- TODO: PITest does not grok Kotlin delegation -->
-                    <coverageThreshold>91</coverageThreshold>
-                    <mutationThreshold>50</mutationThreshold>
+                    <coverageThreshold>95</coverageThreshold>
+                    <mutationThreshold>54</mutationThreshold>
                     <timestampedReports>false</timestampedReports>
                 </configuration>
                 <executions>

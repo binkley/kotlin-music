@@ -13,6 +13,7 @@ import hm.binkley.music.Pitch.F
 import hm.binkley.music.Pitch.G
 import hm.binkley.music.Pitch.Gb
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.shouldNotBe
 import io.kotest.matchers.types.shouldBeSameInstanceAs
 import org.junit.jupiter.api.Test
 
@@ -22,9 +23,31 @@ import org.junit.jupiter.api.Test
  */
 internal class ScaleTest {
     @Test
+    fun `is delegated to list`() {
+        A.asMajorKey().pitches shouldBe A.asMajorKey()
+    }
+
+    @Test
+    fun `can equate scales`() {
+        A.asMajorKey() shouldBe A.asMajorKey()
+        A.asMinorKey() shouldNotBe A.asMajorKey()
+    }
+
+    @Test
+    fun `can hash scales`() {
+        A.asMajorKey().hashCode() shouldBe A.asMajorKey().hashCode()
+        A.asMinorKey().hashCode() shouldNotBe A.asMajorKey().hashCode()
+    }
+
+    @Test
+    fun `can debug scales`() {
+        "${A.asMajorKey()}" shouldBe "${listOf(A, B, Db, D, E, Gb, Ab)}"
+    }
+
+    @Test
     fun `should have all notes for major keys`() {
         A.asMajorKey().tonic shouldBeSameInstanceAs A
-        A.asMajorKey().pitches shouldBe listOf(A, B, Db, D, E, Gb, Ab)
+        A.asMajorKey() shouldBe listOf(A, B, Db, D, E, Gb, Ab)
     }
 
     @Test
