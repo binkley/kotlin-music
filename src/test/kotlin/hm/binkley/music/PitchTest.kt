@@ -24,6 +24,22 @@ import org.junit.jupiter.api.Test
  */
 internal class PitchTest {
     @Test
+    fun `all pitches have a flat supertonic`() {
+        A.flatSupertonic shouldBeSameInstanceAs Bb
+        Bb.flatSupertonic shouldBeSameInstanceAs B
+        B.flatSupertonic shouldBeSameInstanceAs C
+        C.flatSupertonic shouldBeSameInstanceAs Db
+        Db.flatSupertonic shouldBeSameInstanceAs D
+        D.flatSupertonic shouldBeSameInstanceAs Eb
+        Eb.flatSupertonic shouldBeSameInstanceAs E
+        E.flatSupertonic shouldBeSameInstanceAs F
+        F.flatSupertonic shouldBeSameInstanceAs Gb
+        Gb.flatSupertonic shouldBeSameInstanceAs G
+        G.flatSupertonic shouldBeSameInstanceAs Ab
+        Ab.flatSupertonic shouldBeSameInstanceAs A
+    }
+
+    @Test
     fun `all pitches have a supertonic`() {
         A.supertonic shouldBeSameInstanceAs B
         Bb.supertonic shouldBeSameInstanceAs C

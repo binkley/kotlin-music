@@ -16,6 +16,7 @@ enum class Pitch(private val aka: List<String>) {
     G(listOf("Fx", "Abb")),
     Ab(listOf("G#"));
 
+    val flatSupertonic get() = this + 1
     val supertonic get() = this + 2
     val minorMediant get() = this + 3
     val majorMediant get() = this + 4
