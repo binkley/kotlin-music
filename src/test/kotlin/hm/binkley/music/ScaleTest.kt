@@ -30,7 +30,7 @@ internal class ScaleTest {
     @Test
     fun `should have all notes for minor keys`() {
         A.asMinorKey().tonic shouldBeSameInstanceAs A
-        A.asMinorKey().pitches shouldBe listOf(A, B, C, D, E, F, G)
+        A.asMinorKey() shouldBe listOf(A, B, C, D, E, F, G)
     }
 
     @Test

@@ -3,7 +3,7 @@ package hm.binkley.music
 import lombok.Generated
 import java.util.Objects.hash
 
-abstract class Scale(val pitches: List<Pitch>) {
+abstract class Scale(val pitches: List<Pitch>) : List<Pitch> by pitches {
     val tonic get() = pitches[0]
 
     @Generated
