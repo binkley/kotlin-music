@@ -58,16 +58,17 @@ completion, and Java interoperability.
 
 #### Properties
 
+- `flatSupertonic`
 - `supertonic`
-- `minor mediant`
-- `major mediant`
+- `minorMediant`
+- `majorMediant`
 - `subdominant`
 - `tritone`
 - `dominant`
-- `minor submediant`
-- `major submediant`
-- `minor subtonic`
-- `minor supertonic`
+- `minorSubmediant`
+- `majorSubmediant`
+- `minorSubtonic`
+- `minorSupertonic`
 
 #### Functions
 
